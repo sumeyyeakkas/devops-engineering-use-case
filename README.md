@@ -1,7 +1,7 @@
 ﻿# DevOps Engineer Use Case Study
 
-**Problems encountered while building the application:**
-- **Kubernetes Networking Issues:** Faced networking issues and needed to examine pod logs. It was initially unclear how to proceed, so I decided to use kubectl describe on my pod to investigate further.
+**Problems encountered while building the application and how to deal with:**
+- **Kubernetes Networking Issues:** Faced networking issues and needed to examine pod logs. It was initially unclear how to proceed, so I decided to use kubectl describe on my pod to investigate further. That's the point of kubernetes networking issues.
 
 - **CrashLoopBackOff Status:** My pod was stuck in a CrashLoopBackOff status. The logs were instrumental in identifying that the issue was due to a misconfigured Dockerfile, specifically an incorrect application file path.
 
