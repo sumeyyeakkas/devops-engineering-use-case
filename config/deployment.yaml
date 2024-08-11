@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: use-case
-        image: sumeyyeakkas/use-case:latest4
+        image: sumeyyeakkas/use-case:latest7
         ports:
         - containerPort: 5000
         livenessProbe:
