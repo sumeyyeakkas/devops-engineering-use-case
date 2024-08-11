@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
       - name: use-case
-        image: <DockerHubUsername>/use-case
+        image: sumeyyeakkas/use-case:latest4
         ports:
         - containerPort: 5000
         livenessProbe:
           httpGet:
             path: /health
             port: 5000
-          initialDelaySeconds: 5
+          initialDelaySeconds: 30
           periodSeconds: 10
 

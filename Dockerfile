@@ -1,11 +1,13 @@
-# Base image olarak Python kullanalım
 FROM python:3.12
 
-# Uygulama kodunu /app dizinine kopyalayalım
-COPY . /app
+WORKDIR /app
 
-# Gerekli bağımlılıkları yükleyelim
-RUN pip install -r /app/requirements.txt
+COPY app/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Uygulamayı çalıştıralım
-CMD ["python", "/app/app.py"]
+COPY app/app.py ./
+
+CMD ["python3", "app.py"]
+
+EXPOSE 5000
+
