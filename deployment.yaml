@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: use-case-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: use-case
+  template:
+    metadata:
+      labels:
+        app: use-case
+    spec:
+      containers:
+      - name: use-case
+        image: <DockerHubUsername>/use-case
+        ports:
+        - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+
