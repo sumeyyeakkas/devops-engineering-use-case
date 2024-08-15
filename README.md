@@ -9,7 +9,9 @@
 
 - **Container and Pod Debugging:** Occasionally needed to exec into my Docker containers and pods to troubleshoot issues.
 
-- **Nginx Configuration:** Configuring Nginx for the first time was challenging. I had to rely heavily on resources like YouTube, Google, StackOverflow, and various posts to get it right. Firstly i set up my own nginix deployment , service and configmap then after researching i found ready configuration like:
+- **AWS EC2 and EKS configuration:** You can reach application therough load balancer aoutomatic assigned URL : `http://a17b06c2173824c62a71c0f6517c91e9-1922354339.eu-central-1.elb.amazonaws.com/`
 
-!! Nginx ingress controller set up: `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml`
+![Alt text](image-1.png)
+
+![Alt text](image.png)
 

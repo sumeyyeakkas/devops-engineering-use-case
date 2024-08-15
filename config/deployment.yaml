@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: use-case
-        image: sumeyyeakkas/use-case:latest7
+        image: 058264089626.dkr.ecr.eu-central-1.amazonaws.com/devops-use-case:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
