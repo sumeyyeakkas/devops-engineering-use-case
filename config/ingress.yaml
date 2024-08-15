@@ -3,11 +3,12 @@ kind: Ingress
 metadata:
   name: use-case-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
+  ingressClassName: alb
   rules:
-  - host: use.case.com
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
