@@ -9,7 +9,7 @@
 
 - **Container and Pod Debugging:** Occasionally needed to exec into my Docker containers and pods to troubleshoot issues.
 
-- **AWS EC2 and EKS configuration:** You can reach application therough load balancer aoutomatic assigned URL : `http://a17b06c2173824c62a71c0f6517c91e9-1922354339.eu-central-1.elb.amazonaws.com/`
+- **Local cluster issue:** I was having problem with deployment on the local cluster so i decided to use AWS EC2 and EKS. As a result you can reach application through load balancer aoutomatic assigned URL : `http://a17b06c2173824c62a71c0f6517c91e9-1922354339.eu-central-1.elb.amazonaws.com/`
 
 ![Alt text](image-1.png)
 
