@@ -3,7 +3,12 @@ kind: Deployment
 metadata:
   name: use-case-deployment
 spec:
-  replicas: 1
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1  
   selector:
     matchLabels:
       app: use-case
@@ -24,4 +29,15 @@ spec:
             port: 5000
           initialDelaySeconds: 30
           periodSeconds: 10
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+        securityContext: 
+          runAsUser: 1000  
+          runAsGroup: 3000
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+              - ALL 
 
